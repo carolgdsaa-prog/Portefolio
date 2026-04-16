@@ -88,6 +88,12 @@
         max-width: 50%;
         padding: 0  4px;
         }
+        .coluna img{
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+             }
+
 
 
 
