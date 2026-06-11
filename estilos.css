@@ -1,9 +1,9 @@
- body {
+body {
      font-family: CoFo 'Times New Roman', Times, serif;
      background-color: rgb(240, 240, 240);
      margin: 0px;
      padding: 0px;
-     background-color: rgb(242, 235, 226);
+     background-color: rgb(250, 246, 241);
 
  }
 
@@ -18,18 +18,25 @@
  }
 
  h1 {
-     color: rgb(0, 0, 0);
-     text-align: center;
-     font-size: 80px;
+     color: rgb(126, 66, 81);
+     text-align:left;
+     font-size: 70px;
      text-decoration-color: currentColor;
-     margin-top: 190px;
+     margin-top: 100px;
+     margin-inline: 45px;
  }
+ .titulo {
+    font-size: 170px;
+    text-align: left;
+    margin-top: 100px;
+    }
 
  h2 {
-     color: rgb(124, 120, 92);
-     text-align: center;
-     font-size: 40px;
+     color: rgb(126, 66, 81);
+     text-align: right;
+     font-size: 100px;
      text-decoration-color: currentColor;
+     margin-top: 110px;
 
  }
 
@@ -41,37 +48,62 @@
      margin-top: 220px;
 
  }
+ 
+ h4 {
+    color:rgb(126, 66, 81);
+    text-align: center;
+    font-size: 60px;
+    text-decoration-color: currentColor;
+    margin-top: 190px;
+     }
+
+h5 {
+    color: rgb(0,0,0);
+    text-align: center;
+    font-size: 30px;
+    text-decoration-color: currentColor;
+    }
 
 
  #cabecalho {
-     background-color: rgb(242, 235, 226);
-     border: rgb(0, 0, 0) solid 2px;
+     background-color: rgb(234, 230, 224);
+     border: rgb(190, 188, 186) solid 2px;
      margin: 0px;
-     padding: 10px;
+     width: 100%; 
+     padding: 2px ; 
+     text-align: left;
  }
 
  #cabecalho a {
      color: rgb(0, 0, 0);
-     font-size: 25px;
+     font-size: 19px;
+     text-align: center;
  }
 
  #cabecalho li {
      display: inline-block;
-     margin-inline: 200px;
+     margin-inline: 45px;
  }
 
+#trabalhos {
+ margin-bottom: 100px;
+}   
+
  #rodape {
-     background-color: rgb(0, 0, 0);
+     background-color: rgb(234, 230, 224);
+     border: rgb(190, 188, 186) solid 2px;
      text-align: center;
-     padding: 5px;
+     padding: 8px;
      position: fixed;
      bottom: 0;
      width: 100%;
+     display: inline-block;
  }
 
  #rodape a {
-     color: rgb(242, 235, 226);
+     color: rgb(0, 0, 0);
      text-decoration: none;
+     font-size: 20px;
  }
 
  /*img {
@@ -88,22 +120,146 @@
  .row {
      display: flex;
      flex-wrap: wrap;
-     padding: 0 4px;
+     padding: 10px 30px; 
+     margin-bottom: 90px;
  }
+
+
 
  .coluna {
      flex: 49%;
      max-width: 50%;
-     padding: 0 4px;
-     
- }
+     box-sizing: border-box;
+     background-color: rgba(176, 103, 103, 0.03); /* Opcional: um fundo muito subtil para alinhar o olhar */
 
- .coluna img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8px;
-     vertical-align: middle;
-     width: 70%;
+}
      
- }
+  .coluna-vazia {
+     flex: 49%;
+     max-width: 50%;
+     height: 0px;       
+     padding: 0px;      
+}
+
+     
+     
+   .coluna img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;          /* Garante que ocupam o mesmo espaço de largura */
+    height: 350px;         /* Mantém a altura máxima igual para todas */
+    object-fit: contain;   /* Mostra a imagem INTEIRA sem cortar e sem distorcer */
+    
+}
+
+.descricao-trabalho {
+    flex: 0 0 100%;          /* Obriga o texto a ficar por baixo das duas imagens */
+    text-align: center;      
+    font-size: 18px;         
+    color: rgb(126, 66, 81);
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 15px;        /* Espaço entre as imagens e o texto */
+    margin-bottom: 40px;
+    margin-inline: 45px;
+     font-weight: bold; 
+    }
+
+    .descricao-trabalho.descricao-esquerda {
+    text-align: left;
+    margin-inline: 0px; 
+    padding-left: 55px; /* Valor ajustado milimetricamente para a face da imagem */
+    margin-top: 15px;   /* Força o texto a subir e ficar colado à imagem */
+    margin-bottom: 40px;
+}
+
+ .retangulo {
+        width: 950px;           
+    max-width: 90%; 
+    min-height: 400px;      
+    background-color: rgb(250, 246, 241); 
+    padding: 40px;          /* Aumentado o espaçamento interno para respirar melhor */
+    margin: 80px auto;      /* Aumentado de 0 para 80px para empurrar o bloco mais para baixo */
+    box-sizing: border-box;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra todo o conteúdo verticalmente dentro do retângulo */
+    align-items: center;
+    color: rgb(0,0,0);
+    border: 1px solid rgb(190, 188, 186); /* Borda cinzenta suave para combinar com o cabeçalho */
+    border-radius: 15px; 
+}
+
+.imagem-cv {
+    display: block;
+    width: 800px;           /* Altere os píxeis para controlar a largura da imagem */
+    height: auto;           /* Mantém a proporção correta para não distorcer a folha */
+    max-width: 90%;         /* Impede que a imagem passe das bordas em ecrãs mais pequenos */
+    margin: 0 auto;         /* Centra a imagem horizontalmente no ecrã */
+
+   
+    margin-top: 40px;       /* Espaço entre o título "CV" e a imagem */
+    margin-bottom: 120px;   /* Espaço no fim para a imagem não ficar colada ao rodapé */
+
+    
+    border: 9px solid rgb(0, 0, 0, 0.03); /* Uma borda fina cinzenta à volta do papel */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .titulo-contacto {
+    color: rgb(0, 0, 0);
+    font-size: 30px;    /* Ajustado para metade do tamanho do h2 normal */
+    text-align: center;
+    margin: 0;
+    font-family: 'CoFo', sans-serif;
+    font-weight: bold;
+}
+
+/* Estilo para o seu nome Carolina Almeida */
+.nome-subtitulo {
+    color: rgb(126, 66, 81);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 5px; 
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+/* Alinha o Email e o Telemóvel horizontalmente */
+.bloco-contactos {
+    display: flex;
+    justify-content: center;
+    gap: 50px; 
+    width: 100%;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contacto-item p {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+/* Os pequenos círculos rosa/terracota atrás dos ícones */
+.icone-circular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    background-color: rgba(126, 66, 81, 0.15); 
+    color: rgb(126, 66, 81);
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+
+
+    
+
